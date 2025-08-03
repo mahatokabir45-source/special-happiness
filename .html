@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Painful Death</title>
+  <style>
+    body {
+      background-color: #797872;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ccc;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 30px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      font-style: italic;
+      background-color: #4c4c46;
+    }
+    h1 {
+      text-align: center;
+      color: #ffd700;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    #text {
+      font-size: 18px;
+      white-space: pre-wrap;
+      border-right: 2px solid #ccc;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Painful Death</h1>
+    <p id="text"></p>
+  </div>
+
+  <script>
+    const message = `Our love story was written in the stars, but never meant to last. 
+Saleena, you were my light, my world — and in losing you, I lost myself.
+Every moment we shared now cuts like a blade in my chest.
+You promised forever… but forever ended too soon.
+Now, I'm just breathing pain and remembering you.`;
+
+    const textElement = document.getElementById("text");
+    let index = 0;
+
+    function typeWriter() {
+      if (index < message.length) {
+        textElement.innerHTML += message.charAt(index);
+        index++;
+        setTimeout(typeWriter, 40); // speed in milliseconds
+      } else {
+        textElement.style.borderRight = "none"; // Remove cursor after typing ends
+      }
+    }
+
+    typeWriter();
+  </script>
+</body>
+</html>
+
+      
+  
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
